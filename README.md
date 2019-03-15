@@ -2,11 +2,10 @@
 
 The full tutorial is taken from pyTorch's official documentation. (https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html#). I have added code to export the trained model (in tutorial) to first onnx and then running it using caffe2.
 
-Results:
+*Results*:
 
-```
 1. Time taken for torch model:
-
+```
 predict('Dovesky')
 predict('Jackson')
 predict('Satoshi')
@@ -31,8 +30,8 @@ Output:
 (-2.47) Italian
 ```
 
-```
 2. Time taken onnx model:
+```
 predictCaffe2Model('Dovesky')
 predictCaffe2Model('Jackson')
 predictCaffe2Model('Satoshi')
