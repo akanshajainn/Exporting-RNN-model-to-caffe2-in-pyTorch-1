@@ -1,13 +1,12 @@
-# exporting-rnn-model-to-caffe2-in-pytorch-1
-Exporting the model to onnx and caffe with speed comparison:
+# Exporting RNN model to onnx and caffe with speed comparison in pyTorch-1
 
-The full tutorial is taken from https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html#
-I have added code to export the trained model (in tutorial) to first onnx and then running it using caffe2.
+The full tutorial is taken from pyTorch's official documentation. (https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html#). I have added code to export the trained model (in tutorial) to first onnx and then running it using caffe2.
 
 Results:
-Time taken for **rnn** model run for torch and onnx model:
+
 ```
-1. 
+1. Time taken for torch model:
+
 predict('Dovesky')
 predict('Jackson')
 predict('Satoshi')
@@ -30,8 +29,10 @@ Output:
 (-0.96) Japanese
 (-1.07) Arabic
 (-2.47) Italian
+```
 
-2.
+```
+2. Time taken onnx model:
 predictCaffe2Model('Dovesky')
 predictCaffe2Model('Jackson')
 predictCaffe2Model('Satoshi')
