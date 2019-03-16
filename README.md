@@ -4,8 +4,7 @@ The full tutorial is taken from pyTorch's official documentation. (https://pytor
 
 ```
 torch_out = torch.onnx.export(rnn, (lineToTensor('akansha')[0], rnn.initHidden()), 'char_rnn.onnx', export_params=True, verbose=True) # produces the RuntimeError below
-```
-```
+
 Output : 
 
 graph(%0 : Float(1, 57)
@@ -36,8 +35,7 @@ in2 = rnn.initHidden().data.numpy()
 start_time = time.time()
 out, h = caffe2.python.onnx.backend.run_model(onnx_model, [in1, in2])
 print("--- %s seconds ---" % (time.time() - start_time))
-```
-```
+
 Output:
 
 --- 0.008445978164672852 seconds ---
@@ -52,7 +50,7 @@ array([[-3.0969102, -3.9964178, -4.4682226, -4.081335 , -1.6238663,
         -2.8546565, -4.23935  , -4.4275675, -1.8626163, -2.8326497,
         -3.6823251, -4.080239 , -2.904221 ]], dtype=float32)
 ```
-*Results of execution time comaparison*:
+*Results of execution time comparison*:
 
 1. Time taken for torch model:
 ```
