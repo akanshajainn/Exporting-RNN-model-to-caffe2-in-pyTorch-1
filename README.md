@@ -37,21 +37,22 @@ predictCaffe2Model('Jackson')
 predictCaffe2Model('Satoshi')
 
 Output:
+
 > Dovesky
---- 0.023533344268798828 seconds ---
-(-1.69) English
-(-1.98) Irish
-(-2.11) Scottish
+--- 0.03229641914367676 seconds ---
+(-0.50) Russian
+(-1.12) Czech
+(-3.48) Polish
 
 > Jackson
---- 0.02212238311767578 seconds ---
-(-1.54) Irish
-(-2.11) English
-(-2.14) Dutch
+--- 0.022897005081176758 seconds ---
+(-0.22) Scottish
+(-2.65) English
+(-2.95) Russian
 
 > Satoshi
---- 0.022337913513183594 seconds ---
-(-0.92) Italian
-(-1.96) Japanese
-(-2.58) Korean
+--- 0.022278785705566406 seconds ---
+(-0.74) Arabic
+(-1.42) Japanese
+(-2.41) Italian
 ```
