@@ -6,28 +6,23 @@ The full tutorial is taken from pyTorch's official documentation. (https://pytor
 
 1. Time taken for torch model:
 ```
-predict('Dovesky')
-predict('Jackson')
-predict('Satoshi')
-
-Output:
 > Dovesky
---- 0.0013060569763183594 seconds ---
-(-0.71) Russian
-(-0.98) Czech
-(-2.98) English
+--- 0.0007638931274414062 seconds ---
+(-0.62) Russian
+(-1.13) Czech
+(-2.79) English
 
 > Jackson
---- 0.0005233287811279297 seconds ---
-(-0.77) Scottish
-(-1.81) English
-(-2.04) Russian
+--- 0.0007193088531494141 seconds ---
+(-0.36) English
+(-2.08) Russian
+(-2.46) Scottish
 
 > Satoshi
---- 0.0004475116729736328 seconds ---
-(-0.96) Japanese
-(-1.07) Arabic
-(-2.47) Italian
+--- 0.0006451606750488281 seconds ---
+(-1.30) Italian
+(-1.55) Japanese
+(-1.74) Arabic
 ```
 
 2. Time taken onnx model:
@@ -39,20 +34,21 @@ predictCaffe2Model('Satoshi')
 Output:
 
 > Dovesky
---- 0.03229641914367676 seconds ---
-(-0.50) Russian
-(-1.12) Czech
-(-3.48) Polish
+--- 0.052504539489746094 seconds ---
+(-0.62) Russian
+(-1.13) Czech
+(-2.79) English
 
 > Jackson
---- 0.022897005081176758 seconds ---
-(-0.22) Scottish
-(-2.65) English
-(-2.95) Russian
+--- 0.02758955955505371 seconds ---
+(-0.36) English
+(-2.08) Russian
+(-2.46) Scottish
 
 > Satoshi
---- 0.022278785705566406 seconds ---
-(-0.74) Arabic
-(-1.42) Japanese
-(-2.41) Italian
+--- 0.022540569305419922 seconds ---
+(-1.30) Italian
+(-1.55) Japanese
+(-1.74) Arabic
+
 ```
