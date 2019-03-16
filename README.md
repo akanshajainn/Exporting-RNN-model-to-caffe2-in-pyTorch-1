@@ -61,22 +61,22 @@ predict('Satoshi')
 Output:
 
 > Dovesky
---- 0.0007638931274414062 seconds ---
-(-0.62) Russian
-(-1.13) Czech
-(-2.79) English
+--- 0.004353046417236328 seconds ---
+(-0.82) Czech
+(-0.87) Russian
+(-2.61) Polish
 
 > Jackson
---- 0.0007193088531494141 seconds ---
-(-0.36) English
-(-2.08) Russian
-(-2.46) Scottish
+--- 0.00099945068359375 seconds ---
+(-0.30) Scottish
+(-2.00) English
+(-3.30) Russian
 
 > Satoshi
---- 0.0006451606750488281 seconds ---
-(-1.30) Italian
-(-1.55) Japanese
-(-1.74) Arabic
+--- 0.0009684562683105469 seconds ---
+(-1.03) Italian
+(-1.75) Japanese
+(-2.13) Polish
 ```
 
 2. Time taken for onnx model using caffe2:
@@ -88,21 +88,22 @@ predictCaffe2Model('Satoshi')
 Output:
 
 > Dovesky
---- 0.052504539489746094 seconds ---
-(-0.62) Russian
-(-1.13) Czech
-(-2.79) English
+--- 0.03211021423339844 seconds ---
+(-0.82) Czech
+(-0.87) Russian
+(-2.61) Polish
 
 > Jackson
---- 0.02758955955505371 seconds ---
-(-0.36) English
-(-2.08) Russian
-(-2.46) Scottish
+--- 0.022547245025634766 seconds ---
+(-0.30) Scottish
+(-2.00) English
+(-3.30) Russian
 
 > Satoshi
---- 0.022540569305419922 seconds ---
-(-1.30) Italian
-(-1.55) Japanese
-(-1.74) Arabic
+--- 0.02180027961730957 seconds ---
+(-1.03) Italian
+(-1.75) Japanese
+(-2.13) Polish
+
 
 ```
