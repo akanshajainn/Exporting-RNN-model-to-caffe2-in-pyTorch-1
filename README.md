@@ -6,6 +6,12 @@ The full tutorial is taken from pyTorch's official documentation. (https://pytor
 
 1. Time taken for torch model:
 ```
+predict('Dovesky')
+predict('Jackson')
+predict('Satoshi')
+
+Output:
+
 > Dovesky
 --- 0.0007638931274414062 seconds ---
 (-0.62) Russian
