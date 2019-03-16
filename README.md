@@ -50,7 +50,7 @@ array([[-3.0969102, -3.9964178, -4.4682226, -4.081335 , -1.6238663,
         -2.8546565, -4.23935  , -4.4275675, -1.8626163, -2.8326497,
         -3.6823251, -4.080239 , -2.904221 ]], dtype=float32)
 ```
-*Results of execution time comparison*:
+*Results of execution-time comparison*:
 
 1. Time taken for torch model:
 ```
@@ -79,7 +79,7 @@ Output:
 (-1.74) Arabic
 ```
 
-2. Time taken onnx model:
+2. Time taken for onnx model using caffe2:
 ```
 predictCaffe2Model('Dovesky')
 predictCaffe2Model('Jackson')
