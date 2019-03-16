@@ -5,6 +5,9 @@ The full tutorial is taken from pyTorch's official documentation. (https://pytor
 ```
 torch_out = torch.onnx.export(rnn, (lineToTensor('akansha')[0], rnn.initHidden()), 'char_rnn.onnx', export_params=True, verbose=True) # produces the RuntimeError below
 ```
+```
+Output : 
+
 graph(%0 : Float(1, 57)
       %1 : Float(1, 128)
       %2 : Float(128, 185)
@@ -17,29 +20,38 @@ graph(%0 : Float(1, 57)
   %9 : Float(1, 18) = onnx::LogSoftmax[axis=1](%8), scope: RNN/LogSoftmax[softmax]
   return (%9, %7);
 }
+```
 
 ```
 import onnx
 import caffe2
-import caffe2.python.onnx.backend as onnx_caffe2_backend
+
 # Load the ONNX ModelProto object. model is a standard Python protobuf object
 onnx_model = onnx.load("char_rnn.onnx")
+
 # takes array input instead of torch tensor
 in1 = lineToTensor('akansha')[0].data.numpy()
 in2 = rnn.initHidden().data.numpy()
+
 start_time = time.time()
 out, h = caffe2.python.onnx.backend.run_model(onnx_model, [in1, in2])
 print("--- %s seconds ---" % (time.time() - start_time))
 ```
+```
+Output:
+
 --- 0.008445978164672852 seconds ---
 ```
-out  # produces array output instead of torch tensor
 ```
+print(out)  # produces array output instead of torch tensor
+
+Output:
+
 array([[-3.0969102, -3.9964178, -4.4682226, -4.081335 , -1.6238663,
         -2.3298087, -3.6378086, -2.0644147, -4.3406234, -2.9473362,
         -2.8546565, -4.23935  , -4.4275675, -1.8626163, -2.8326497,
         -3.6823251, -4.080239 , -2.904221 ]], dtype=float32)
-
+```
 *Results of execution time comaparison*:
 
 1. Time taken for torch model:
