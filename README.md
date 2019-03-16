@@ -25,7 +25,7 @@ graph(%0 : Float(1, 57)
 import onnx
 import caffe2
 
-# Load the ONNX ModelProto object. model is a standard Python protobuf object
+# Load the ONNX ModelProto object. onnx_model is a standard Python protobuf object
 onnx_model = onnx.load("char_rnn.onnx")
 
 # takes array input instead of torch tensor
